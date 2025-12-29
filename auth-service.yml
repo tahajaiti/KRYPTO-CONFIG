@@ -1,0 +1,19 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: test-service
+  datasource:
+    url: ${JDBC_DATABASE_URL:jdbc:postgresql://postgres:5432/krypto}
+    username: ${POSTGRES_USER:krypto}
+    password: ${POSTGRES_PASSWORD:secret}
+  data:
+    redis:
+      host: ${REDIS_HOST:redis}
+      port: ${REDIS_PORT:6379}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery:8761/eureka/
