@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: test-service
+    name: auth-service
   datasource:
     url: ${JDBC_DATABASE_URL:jdbc:postgresql://postgres:5432/krypto}
     username: ${POSTGRES_USER:krypto}
